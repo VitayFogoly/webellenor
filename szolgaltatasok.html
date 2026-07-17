@@ -145,56 +145,64 @@
 
 				<section id="contact">
 						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Név</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">E-mail cím</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Üzenet (Milyen oldalt szeretne tesztelni?)</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Üzenet küldése" class="primary" /></li>
-										<li><input type="reset" value="Törlés" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
+<section>
+    <!-- 1. Az action attribútum mostantól a SplitForms szerverére mutat -->
+    <form method="post" action="https://splitforms.com/api/submit">
+        
+        <!-- 2. IDE MÁSOLD BE a SplitForms dashboardon kapott egyedi kulcsodat (Access Key) -->
+        <input type="hidden" name="access_key" value="ea510afb986144c6b536e123916edb11" />
+
+        <div class="fields">
+            <div class="field half">
+                <label for="name">Név</label>
+                <input type="text" name="name" id="name" required />
+            </div>
+            <div class="field half">
+                <label for="email">Email</label>
+                <!-- Kicsit javítottam: type="text" helyett type="email" lett, így ellenőrzi, hogy valódi e-mail címet írnak-e be -->
+                <input type="email" name="email" id="email" required />
+            </div>
+            <div class="field">
+                <label for="message">Üzenet</label>
+                <textarea name="message" id="message" rows="6" required></textarea>
+            </div>
+        </div>
+        <ul class="actions">
+            <li><input type="submit" value="Üzenet küldése" class="primary" /></li>
+            <li><input type="reset" value="Törlés" /></li>
+        </ul>
+    </form>
+</section>	
+                            <section class="split">
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
-										<h3>E-mail</h3>
-										<a href="mailto:info@tesztelesed.hu">info@tesztelesed.hu</a>
+										<h3>Email</h3>
+										<a href="#">info@webellenor.hu</a>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-phone"></span>
-										<h3>Telefon</h3>
-										<span>+36 (20) 000-0000</span>
+										<h3>Telefonszám</h3>
+										<span>+36 20 441 1650</span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-home"></span>
-										<h3>Helyszín</h3>
-										<span>Budapest, Magyarország<br />
-										(Online / Távmunka országosan)</span>
+										<h3>Cím</h3>
+										<span>1234 Somewhere Road #5432<br />
+										Nashville, TN 00000<br />
+										United States of America</span>
 									</div>
 								</section>
 							</section>
 						</div>
 					</section>
 
-				<footer id="footer">
+				<!-- Footer -->
+					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
 								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -202,13 +210,12 @@
 								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Minden jog fenntartva.</li><li>Dizájn: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 2026 Sándor Noémi. Minden jog fenntartva.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>
 
 			</div>
-
 		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
